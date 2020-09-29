@@ -4,139 +4,197 @@
 
 @section('content')
 
-<div class="sec-main-slider">
+<div class="sec-index-slider">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <h2 class="main-header"></h2>
-                <a href="" class="main-link">
-                    <button class="zakaz-body-btn main-s-btn">Подробнее </button>
-                </a>
-                <div class="d-flex">
-                    <div class="arrow-btn prev-btn">
-                        <img src="/src/images/prev.png">
+        <div class="index-slider-block">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="naukan-img">
+                            <img src="/src/images/slide1.png" alt="">
+                        </div>
                     </div>
-                    <div class="arrow-btn next-btn">
-                        <img src="/src/images/next.png">
+                    <div class="swiper-slide">
+                        <div class="naukan-img">
+                            <img src="/src/images/slide1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="naukan-img">
+                            <img src="/src/images/slide1.png" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="main-slider-block">
-                    <img src="" class="slider-stol">
-                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </div>
-    <script>
-        var stolSlider = [
-            // {src: '/src/images/stol1.png', title: '', link: ''},
-            {src: '/src/images/stol2.png', title: 'Кухни на заказ', link: '1'},
-            {src: '/src/images/stol3.png', title: 'ШКАФЫ-КУПЕ НА ЗАКАЗ', link: '2'}
-        ]
-        var currentSlide = 0;
+</div>
 
-        $('.sec-main-slider .prev-btn').on('click', function () {
-            if (currentSlide > 0) {
-                currentSlide--
-                slideChange()
-            }
-        })
-        $('.sec-main-slider .next-btn').on('click', function () {
-            if (currentSlide < stolSlider.length - 1) {
-                currentSlide++
-                slideChange()
-            }
-        })
+<div class="container">
+    <div class="tovari-block mb-40">
+        <div class="tovari-header">
+            <h4 class="tovari-header-title">Новинки</h4>
+            <a href="#" class="d-flex"><button class="tovari-header-link"></button></a>
+        </div>
+        <div class="tovari-body">
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-3">--}}
+                    <div class="tovar">
+                        <img src="/src/images/tovar1.png">
+                        <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="tovar-price">8 700 KZT</p>
+                            <button class="tovar-korzina"></button>
+                        </div>
+                    </div>
+{{--                </div>--}}
+{{--                <div class="col-lg-3">--}}
+                    <div class="tovar">
+                        <img src="/src/images/tovar2.png">
+                        <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="tovar-price">8 700 KZT</p>
+                            <button class="tovar-korzina"></button>
+                        </div>
+                    </div>
+{{--                </div>--}}
+{{--                <div class="col-lg-3">--}}
+                    <div class="tovar">
+                        <img src="/src/images/tovar3.png">
+                        <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="tovar-price">8 700 KZT</p>
+                            <button class="tovar-korzina"></button>
+                        </div>
+                    </div>
+{{--                </div>--}}
+{{--                <div class="col-lg-3">--}}
+                    <div class="tovar">
+                        <img src="/src/images/tovar4.png">
+                        <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="tovar-price">8 700 KZT</p>
+                            <button class="tovar-korzina"></button>
+                        </div>
+                    </div>
+{{--                </div>--}}
+{{--            </div>--}}
+        </div>
+    </div>
+    <div class="tovari-block">
+        <div class="tovari-header">
+            <h4 class="tovari-header-title">Акции</h4>
+            <a href="#" class="d-flex"><button class="tovari-header-link"></button></a>
+        </div>
+        <div class="tovari-body">
+            {{--            <div class="row">--}}
+            {{--                <div class="col-lg-3">--}}
+            <div class="tovar">
+                <img src="/src/images/tovar1.png">
+                <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="tovar-price">8 700 KZT</p>
+                    <button class="tovar-korzina"></button>
+                </div>
+            </div>
+            {{--                </div>--}}
+            {{--                <div class="col-lg-3">--}}
+            <div class="tovar">
+                <img src="/src/images/tovar2.png">
+                <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="tovar-price">8 700 KZT</p>
+                    <button class="tovar-korzina"></button>
+                </div>
+            </div>
+            {{--                </div>--}}
+            {{--                <div class="col-lg-3">--}}
+            <div class="tovar">
+                <img src="/src/images/tovar3.png">
+                <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="tovar-price">8 700 KZT</p>
+                    <button class="tovar-korzina"></button>
+                </div>
+            </div>
+            {{--                </div>--}}
+            {{--                <div class="col-lg-3">--}}
+            <div class="tovar">
+                <img src="/src/images/tovar4.png">
+                <p class="tovar-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="tovar-price">8 700 KZT</p>
+                    <button class="tovar-korzina"></button>
+                </div>
+            </div>
+            {{--                </div>--}}
+            {{--            </div>--}}
+        </div>
+    </div>
+</div>
 
-        function slideChange() {
-            $('.slider-stol').fadeOut(400, function() {
-                $(".slider-stol").attr('src', stolSlider[currentSlide].src);
-            }).fadeIn(400);
-            $(".main-header").text(stolSlider[currentSlide].title)
-            $(".main-link").attr('href', stolSlider[currentSlide].link)
+<div class="sec-priviliges">
+    <div class="container">
+        <div class="priviliges-block d-flex">
+            <div class="privilige text-center">
+                <img src="/src/images/p-frame.png">
+                <p>Огромный оссартимент товаров и услуг</p>
+            </div>
+            <div class="privilige text-center">
+                <img src="/src/images/p-car.png">
+                <p>Удобная доставка</p>
+            </div>
+            <div class="privilige text-center">
+                <img src="/src/images/p-shield.png">
+                <p>Качественное гарантийное обслуживание</p>
+            </div>
+            <div class="privilige text-center">
+                <img src="/src/images/p-coin.png">
+                <p>Оплата любыми способами</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var mySwiperInfo = new Swiper ('.index-slider-block .swiper-container', {
+        loop: false,
+        // slidesPerView: 1,
+        // initialSlide: 1,
+        // centeredSlides: true,
+        spaceBetween: 0,
+        keyboard: {
+            enabled: false,
+            onlyInViewport: false,
+        },
+        // grabCursor: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        breakpoints: {
+            // 575: {
+            // slidesPerView: 3
+            // },
+            // 320: {
+            // slidesPerView: 2
+            // },
         }
-
-        slideChange()
-    </script>
-</div>
-
-<div class="sec-mebel-na-zakaz">
-    <div class="container">
-        <h3 class="section-header">МЕБЕЛЬ НА ЗАКАЗ В АЛМАТЫ</h3>
-        <div class="d-flex justify-content-center flex-column flex-md-row">
-            <div class="room-zakaz room-zakaz-big">
-                <div class="zakaz-body">
-                    <h4>Кухни на заказ</h4>
-<!--                    <button class="zakaz-body-btn">Подробнее </button>-->
-                </div>
-            </div>
-            <div class="d-flex flex-wrap room-zakaz-other flex-column flex-md-row">
-                <div class="room-zakaz room-zakaz-1">
-                    <div class="zakaz-body">
-                        <h4>Кухни на заказ</h4>
-<!--                        <button class="zakaz-body-btn">Подробнее </button>-->
-                    </div>
-                </div>
-                <div class="room-zakaz room-zakaz-2">
-                    <div class="zakaz-body">
-                        <h4>Гостиные на заказ</h4>
-<!--                        <button class="zakaz-body-btn">Подробнее </button>-->
-                    </div>
-                </div>
-                <div class="room-zakaz room-zakaz-3">
-                    <div class="zakaz-body">
-                        <h4>Спальни на заказ</h4>
-<!--                        <button class="zakaz-body-btn">Подробнее </button>-->
-                    </div>
-                </div>
-                <div class="room-zakaz room-zakaz-4">
-                    <div class="zakaz-body">
-                        <h4>Прихожие на заказ</h4>
-<!--                        <button class="zakaz-body-btn">Подробнее </button>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="sec-pochemu-v-nas">
-    <div class="container">
-        <h3 class="section-header">почему выбирают нас?!</h3>
-        <div class="d-flex justify-content-center pb-lg-5 flex-column flex-md-row align-items-center align-items-md-baseline">
-            <div class="reason">
-                <img src="/src/images/medal.png">
-                <p>11 лет на рынке изготовления мебели</p>
-            </div>
-            <div class="reason">
-                <img src="/src/images/sofa.png">
-                <p>Более 1000 дизайнов интерьера</p>
-            </div>
-            <div class="reason">
-                <img src="/src/images/customize.png">
-                <p>Собственное производство</p>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center pt-lg-3 flex-column flex-md-row align-items-center align-items-md-baseline">
-            <div class="reason">
-                <img src="/src/images/shield.png">
-                <p>Европейское качество</p>
-            </div>
-            <div class="reason">
-                <img src="/src/images/sale.png">
-                <p>Доступные цены</p>
-            </div>
-        </div>
-    </div>
-    <div class="img-up">
-        <img src="/src/images/up.png">
-    </div>
-    <script>
-        $('.img-up').on('click', function () {
-            $('html,body').animate({ scrollTop: 0 }, 'slow');
-        })
-    </script>
-</div>
+    })
+</script>
 
 @endsection

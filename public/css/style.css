@@ -151,45 +151,6 @@ header {
   cursor: pointer;
 }
 
-.slider {
-  width: 100%;
-  height: 600px;
-  background: url("/src/images/Rectangle1.png") no-repeat center/cover;
-  position: relative;
-}
-
-.slider:nth-child(2) {
-  background: url("/src/images/Rectangle2.png") no-repeat center/cover;
-}
-
-.slider:nth-child(3) {
-  background: url("/src/images/Rectangle3.png") no-repeat center/cover;
-}
-
-.slider:nth-child(4) {
-  background: url("/src/images/Rectangle4.png") no-repeat center/cover;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  width: 80px;
-  height: 80px;
-  background: url("/src/images/Ellipse1.png") no-repeat center;
-  margin: 0 15px;
-  opacity: unset;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(2) {
-  background: url("/src/images/Ellipse2.png") no-repeat center;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(3) {
-  background: url("/src/images/Ellipse3.png") no-repeat center;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:nth-child(4) {
-  background: url("/src/images/Ellipse4.png") no-repeat center;
-}
-
 .social-icons {
   position: absolute;
   right: 30px;
@@ -210,56 +171,6 @@ header {
   .social-icons {
     display: none;
   }
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  border: 3px solid #FFFFFF;
-}
-
-.swiper-bg {
-  position: relative;
-}
-
-.slider-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 0;
-}
-
-.slider-ex {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-}
-
-.slider-ex h1 {
-  font-weight: 600;
-  font-size: 36px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  z-index: 1;
-  padding-bottom: 5px;
-}
-
-.slider-ex h5 {
-  font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1;
 }
 
 .green-btn {
@@ -1184,6 +1095,75 @@ footer .footer-law-text {
   margin-right: 11px;
 }
 
+.tovari-block .tovari-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px 30px;
+  border: 0.5px solid #D5DDE0;
+  border-bottom: 0;
+  background-color: #fff;
+}
+
+.tovari-block .tovari-header-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-right: 16px;
+}
+
+.tovari-block .tovari-header-link {
+  padding: 0;
+  height: 30px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.tovari-block .tovari-header-link:before {
+  content: url("/src/images/Arrow - Right Square.png");
+}
+
+.tovari-block .tovari-body {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.tovari-block .tovari-body .tovar {
+  text-align: center;
+  padding: 25px 20px 30px 20px;
+  border: 0.5px solid #D5DDE0;
+  background-color: #fff;
+}
+
+.tovari-block .tovari-body .tovar-title {
+  text-align: left;
+  line-height: 140%;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.tovari-block .tovari-body .tovar-price {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 150%;
+  color: #3E4958;
+}
+
+.tovari-block .tovari-body .tovar-korzina {
+  background: #61A639;
+  border-radius: 5px;
+  padding: 10px 15px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.tovari-block .tovari-body .tovar-korzina:before {
+  content: url("/src/images/shopping-cart-icon.png");
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
 /*---------------------------  COMMON STYLES END ------------------------------------------- */
 
 /* -------------------------   SECTION START - Bud v kurse -------------------------- */
@@ -1975,5 +1955,76 @@ footer .footer-law-text {
   .sec-works-slider .slider-swipe .swiper-b-prev {
     left: 10px;
   }
+}
+
+/* ----------------------------   SECTION - INDEX Slider   ------------------------------- */
+
+.sec-index-slider {
+  padding: 40px 0;
+}
+
+.sec-index-slider .naukan-img img {
+  height: 440px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.sec-index-slider .swiper-button-prev {
+  left: 12px;
+  width: 50px;
+}
+
+.sec-index-slider .swiper-button-prev:after {
+  content: url("/src/images/slider-left-arrow.png");
+}
+
+.sec-index-slider .swiper-button-next {
+  right: 12px;
+  width: 50px;
+}
+
+.sec-index-slider .swiper-button-next:after {
+  content: url("/src/images/slider-right-arrow.png");
+}
+
+.sec-index-slider .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #FFFFFF;
+  border: 1px solid #D5DDE0;
+  opacity: 1;
+}
+
+.sec-index-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border: 0;
+  background-color: #61A639;
+}
+
+/* ----------------------------   SECTION - Priviliges   ------------------------------- */
+
+.sec-priviliges {
+  padding: 40px 0;
+}
+
+.sec-priviliges .priviliges-block {
+  background: #FFFFFF;
+  border: 0.5px solid #D5DDE0;
+  padding: 20px 0;
+}
+
+.sec-priviliges .priviliges-block .privilige {
+  width: 25%;
+  padding: 20px 30px 15px;
+  border-right: 1px solid #D5DDE0;
+}
+
+.sec-priviliges .priviliges-block .privilige:last-child {
+  border: 0;
+}
+
+.sec-priviliges .priviliges-block .privilige img {
+  margin-bottom: 20px;
 }
 
