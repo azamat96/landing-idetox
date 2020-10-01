@@ -985,7 +985,7 @@ footer .footer-law-text {
 }
 
 .breadcrumb-custom .breadcrumb-item {
-  padding-left: 14px;
+  padding-left: 15px;
 }
 
 .breadcrumb-custom .breadcrumb-item.active {
@@ -1003,7 +1003,20 @@ footer .footer-law-text {
 .breadcrumb-custom .breadcrumb-item:before {
   color: #fff;
   content: ">";
-  padding-right: 14px;
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.breadcrumb-custom-green .breadcrumb-item.active {
+  color: #86969D;
+}
+
+.breadcrumb-custom-green .breadcrumb-item a {
+  color: #61A639;
+}
+
+.breadcrumb-custom-green .breadcrumb-item:before {
+  color: #61A639;
 }
 
 .reason {
@@ -1095,7 +1108,7 @@ footer .footer-law-text {
   margin-right: 11px;
 }
 
-.tovari-block .tovari-header {
+.tovari-header {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -1105,50 +1118,50 @@ footer .footer-law-text {
   background-color: #fff;
 }
 
-.tovari-block .tovari-header-title {
+.tovari-header-title {
   font-size: 1.5rem;
   font-weight: 800;
   margin-right: 16px;
 }
 
-.tovari-block .tovari-header-link {
+.tovari-header-link {
   padding: 0;
   height: 30px;
   background: #fff;
   cursor: pointer;
 }
 
-.tovari-block .tovari-header-link:before {
+.tovari-header-link:before {
   content: url("/src/images/Arrow - Right Square.png");
 }
 
-.tovari-block .tovari-body {
+.tovari-body {
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
 
-.tovari-block .tovari-body .tovar {
+.tovar {
   text-align: center;
   padding: 25px 20px 30px 20px;
   border: 0.5px solid #D5DDE0;
   background-color: #fff;
 }
 
-.tovari-block .tovari-body .tovar-title {
+.tovar-title {
   text-align: left;
   line-height: 140%;
   margin: 20px 0;
   font-weight: 500;
 }
 
-.tovari-block .tovari-body .tovar-price {
+.tovar-price {
   font-weight: 800;
   font-size: 18px;
   line-height: 150%;
   color: #3E4958;
 }
 
-.tovari-block .tovari-body .tovar-korzina {
+.tovar-korzina {
   background: #61A639;
   border-radius: 5px;
   padding: 10px 15px;
@@ -1156,12 +1169,30 @@ footer .footer-law-text {
   cursor: pointer;
 }
 
-.tovari-block .tovari-body .tovar-korzina:before {
+.tovar-korzina:before {
   content: url("/src/images/shopping-cart-icon.png");
 }
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.pagination .page-item .page-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #86969D;
+  border: 0;
+  padding: .5rem .9rem;
+  border-radius: 50%;
+}
+
+.pagination .page-item .page-link.active {
+  font-weight: 800;
+  color: #3E4958;
+}
+
+.pagination .page-item .page-arrows {
+  padding: 1px 1px;
 }
 
 /*---------------------------  COMMON STYLES END ------------------------------------------- */
@@ -2026,5 +2057,76 @@ footer .footer-law-text {
 
 .sec-priviliges .priviliges-block .privilige img {
   margin-bottom: 20px;
+}
+
+/* ----------------------------   SECTION - Products   ------------------------------- */
+
+.sec-products {
+  padding-bottom: 70px;
+}
+
+.sec-products .products-types {
+  width: 285px;
+  margin-right: 30px;
+}
+
+.sec-products .products-types .osobi-type {
+  display: flex;
+  align-items: center;
+  padding: 14px 12px;
+  background-color: #fff;
+  border: 0.5px solid #D5DDE0;
+  margin-bottom: 10px;
+}
+
+.sec-products .products-types .osobi-type p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #3E4958;
+  margin-left: 12px;
+}
+
+.sec-products .products-types-list {
+  padding: 15px 0;
+  background: #FFFFFF;
+  border: 0.5px solid #D5DDE0;
+}
+
+.sec-products .products-types-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.sec-products .products-types-list ul a {
+  color: #000;
+}
+
+.sec-products .products-types-list ul a:hover {
+  text-decoration: none;
+}
+
+.sec-products .products-types-list ul li {
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.sec-products .products-types-list ul li.active {
+  background-color: #61A639;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.sec-products .all-products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 810px;
+}
+
+.sec-products .pagination {
+  margin-top: 20px;
 }
 

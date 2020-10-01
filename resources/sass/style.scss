@@ -927,7 +927,7 @@ footer {
   margin-bottom: 30px;
 
   .breadcrumb-item {
-    padding-left: 14px;
+    padding-left: 15px;
     &.active {
       color: #fff;
     }
@@ -940,7 +940,21 @@ footer {
     &:before {
       color: #fff;
       content: ">";
-      padding-right: 14px;
+      padding-left: 0;
+      padding-right: 15px;
+    }
+  }
+}
+.breadcrumb-custom-green {
+  .breadcrumb-item {
+    &.active {
+      color: #86969D;
+    }
+    a {
+      color: #61A639;
+    }
+    &:before {
+      color: #61A639;
     }
   }
 }
@@ -1023,66 +1037,86 @@ footer {
 .tovari-block {
   //background-color: #fff;
   //border: 0.5px solid #D5DDE0;
-
-  .tovari-header {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 20px 30px;
-    border: 0.5px solid #D5DDE0;
-    border-bottom: 0;
-    background-color: #fff;
-    //border-bottom: 0.5px solid #D5DDE0;
-    &-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-right: 16px;
-    }
-    &-link {
-      padding: 0;
-      height: 30px;
-      background: #fff;
-      cursor: pointer;
-      &:before {
-        content: url("/src/images/Arrow - Right Square.png");
-      }
-    }
+}
+.tovari-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 20px 30px;
+  border: 0.5px solid #D5DDE0;
+  border-bottom: 0;
+  background-color: #fff;
+  //border-bottom: 0.5px solid #D5DDE0;
+  &-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-right: 16px;
   }
-  .tovari-body {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    .tovar {
-      text-align: center;
-      padding: 25px 20px 30px 20px;
-      border: 0.5px solid #D5DDE0;
-      background-color: #fff;
-      &-title {
-        text-align: left;
-        line-height: 140%;
-        margin: 20px 0;
-        font-weight: 500;
-      }
-      &-price {
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 150%;
-        color: #3E4958;
-      }
-      &-korzina {
-        background: #61A639;
-        border-radius: 5px;
-        padding: 10px 15px;
-        height: 40px;
-        cursor: pointer;
-        &:before {
-          content: url("/src/images/shopping-cart-icon.png");
-        }
-      }
+  &-link {
+    padding: 0;
+    height: 30px;
+    background: #fff;
+    cursor: pointer;
+    &:before {
+      content: url("/src/images/Arrow - Right Square.png");
     }
   }
 }
+.tovari-body {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.tovar {
+  text-align: center;
+  padding: 25px 20px 30px 20px;
+  border: 0.5px solid #D5DDE0;
+  background-color: #fff;
+  &-title {
+    text-align: left;
+    line-height: 140%;
+    margin: 20px 0;
+    font-weight: 500;
+  }
+  &-price {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 150%;
+    color: #3E4958;
+  }
+  &-korzina {
+    background: #61A639;
+    border-radius: 5px;
+    padding: 10px 15px;
+    height: 40px;
+    cursor: pointer;
+    &:before {
+      content: url("/src/images/shopping-cart-icon.png");
+    }
+  }
+}
+
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.pagination {
+  .page-item {
+    .page-link {
+      font-size: 18px;
+      font-weight: 600;
+      color: #86969D;
+      border: 0;
+      padding: .5rem .9rem;
+      border-radius: 50%;
+      &.active {
+        font-weight: 800;
+        color: #3E4958;
+      }
+    }
+    .page-arrows {
+      padding: 1px 1px;
+    }
+  }
 }
 
 /*---------------------------  COMMON STYLES END ------------------------------------------- */
@@ -1818,5 +1852,66 @@ footer {
         margin-bottom: 20px;
       }
     }
+  }
+}
+
+/* ----------------------------   SECTION - Products   ------------------------------- */
+.sec-products {
+  padding-bottom: 70px;
+
+  .products-types {
+    width: 285px;
+    margin-right: 30px;
+
+    .osobi-type {
+      display: flex;
+      align-items: center;
+      padding: 14px 12px;
+      background-color: #fff;
+      border: 0.5px solid #D5DDE0;
+      margin-bottom: 10px;
+      p {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        color: #3E4958;
+        margin-left: 12px;
+      }
+    }
+    &-list {
+      padding: 15px 0;
+      background: #FFFFFF;
+      border: 0.5px solid #D5DDE0;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0;
+        a {
+          color: #000;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        li {
+          padding: 10px 20px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 19px;
+          &.active {
+            background-color: #61A639;
+            font-weight: bold;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+  .all-products {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 810px;
+  }
+  .pagination {
+    margin-top: 20px;
   }
 }

@@ -20,7 +20,7 @@
                     <img src="/src/images/big-logo.png" alt="" class="logo">
                 </div>
                 <div>
-                   <a href='/' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/' ? 'active' : '').'"'; ?>>Товары и услуги</a>
+                   <a href='/products' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
                    <a href='/'>Новости</a>
                    <a href='/about-us' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/about-us' ? 'active' : '').'"'; ?>>О нас</a>
                    <a href='/contacts' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/contacts' ? 'active' : '').'"'; ?>>Контакты</a>
