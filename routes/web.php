@@ -27,6 +27,9 @@ Route::get('/products/{productName}', function () {
 Route::get('/news', function () {
     return view('news');
 });
+Route::get('/news/{newsName}', function () {
+    return view('news-inside');
+});
 
 Route::get('/about-us', function () {
     return view('o-nas');

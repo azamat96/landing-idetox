@@ -995,6 +995,10 @@ footer .footer-law-text {
   color: #fff;
 }
 
+.breadcrumb-custom .breadcrumb-item.breadcrumb-first-item {
+  padding-left: 0;
+}
+
 .breadcrumb-custom .breadcrumb-item.breadcrumb-first-item:before {
   content: none;
 }
@@ -2217,5 +2221,29 @@ footer .footer-law-text {
   position: absolute;
   right: 15px;
   top: calc(50% - 12px);
+}
+
+/* ----------------------------   SECTION - News Inside  ------------------------------- */
+
+.sec-new-inside {
+  padding-bottom: 70px;
+}
+
+.sec-new-inside .new-title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 49px;
+  color: #3E4958;
+  margin-bottom: 30px;
+}
+
+.sec-new-inside .new-image {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.sec-new-inside .new-body {
+  font-size: 16px;
+  font-weight: 400;
 }
 

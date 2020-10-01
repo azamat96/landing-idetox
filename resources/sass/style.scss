@@ -934,8 +934,11 @@ footer {
     &.active {
       color: #fff;
     }
-    &.breadcrumb-first-item:before {
-      content: none;
+    &.breadcrumb-first-item {
+      padding-left: 0;
+      &:before {
+        content: none;
+      }
     }
     a {
       color: #fff;
@@ -1990,5 +1993,25 @@ footer {
         top: calc(50% - 12px);
       }
     }
+  }
+}
+
+/* ----------------------------   SECTION - News Inside  ------------------------------- */
+.sec-new-inside {
+  padding-bottom: 70px;
+  .new-title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
+    color: #3E4958;
+    margin-bottom: 30px;
+  }
+  .new-image {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .new-body {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
