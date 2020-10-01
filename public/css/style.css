@@ -2161,3 +2161,61 @@ footer .footer-law-text {
   margin-top: 20px;
 }
 
+/* ----------------------------   SECTION - News   ------------------------------- */
+
+.sec-news {
+  padding-bottom: 40px;
+}
+
+.sec-news .news-block {
+  background: #FFFFFF;
+  border: 0.5px solid #D5DDE0;
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
+}
+
+.sec-news .news-block .news-content {
+  height: calc(100% - 305px);
+}
+
+.sec-news .news-block img {
+  margin: 15px 15px 20px 15px;
+  width: calc(100% - 30px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 270px;
+}
+
+.sec-news .news-block .new-title {
+  margin: 0 20px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3E4958;
+}
+
+.sec-news .news-block .new-read-btn {
+  border: 1px solid #61A639;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 0 20px 25px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #61A639;
+  padding: 14px 20px;
+  width: calc(100% - 40px);
+  text-align: left;
+  position: relative;
+}
+
+.sec-news .news-block .new-read-btn:after {
+  content: url("/src/images/Arrow - Right.png");
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 12px);
+}
+

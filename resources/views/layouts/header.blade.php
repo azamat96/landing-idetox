@@ -20,10 +20,11 @@
                     <a href="/"><img src="/src/images/big-logo.png" alt="" class="logo"></a>
                 </div>
                 <div>
-                   <a href='/products' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
-                   <a href='/'>Новости</a>
-                   <a href='/about-us' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/about-us' ? 'active' : '').'"'; ?>>О нас</a>
-                   <a href='/contacts' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/contacts' ? 'active' : '').'"'; ?>>Контакты</a>
+                    <?php $uriList = explode("/", $_SERVER['REQUEST_URI']); ?>
+                   <a href='/products' <?php echo 'class="'.($uriList[1]=='products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
+                   <a href='/news' <?php echo 'class="'.($uriList[1]=='news' ? 'active' : '').'"'; ?>>Новости</a>
+                   <a href='/about-us' <?php echo 'class="'.($uriList[1]=='about-us' ? 'active' : '').'"'; ?>>О нас</a>
+                   <a href='/contacts' <?php echo 'class="'.($uriList[1]=='contacts' ? 'active' : '').'"'; ?>>Контакты</a>
                 </div>
                 <div class="right-side">
                     <button class="korzina-btn">Корзина</button>

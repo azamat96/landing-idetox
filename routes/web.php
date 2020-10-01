@@ -24,6 +24,10 @@ Route::get('/products/{productName}', function () {
     return view('products-inside');
 });
 
+Route::get('/news', function () {
+    return view('news');
+});
+
 Route::get('/about-us', function () {
     return view('o-nas');
 });
