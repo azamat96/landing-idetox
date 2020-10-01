@@ -988,14 +988,14 @@ footer {
 }
 
 .tovar-btn-block {
-  padding: 25px 25px 30px 25px;
+  padding: 25px 25px 20px 25px;
 
   .vernut-nazad-btn {
-    color: $color-main;
-    border-color: $color-main;
+    color: #00458B;
+    border-color: #00458B;
   }
   .zakazat-btn {
-    background-color: $color-orange;
+    background-color: #61A639;
     margin-left: 15px;
     color: #fff;
   }
@@ -1494,33 +1494,48 @@ footer {
 
 /* ----------------------------   SECTION - Magazin Inside ------------------------------- */
 .sec-magazine-inside {
-  padding: 40px 0 120px 0;
+  padding-bottom: 70px;
 
-  .breadcrumb-custom {
-    background-color: $color-bg;
-    margin-bottom: 43px;
-  }
   .magazin-block {
     background: #FFFFFF;
     border: 0.5px solid #E0E0E0;
 
-    .magazin-img {
-      margin: 20px;
+    .magazin-image {
+      padding: 20px;
+      &-zoom-text {
+        margin: 20px 0 15px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #86969D;
+      }
+      .product-img {
+        padding: 0 5px;
+        img {
+          width: 76px;
+          height: 60px;
+          object-fit: contain;
+          &.active {
+            border: 2px solid #61A639;
+          }
+        }
+      }
     }
     .magazin-desc {
       border-left: 0.5px solid #E0E0E0;
       width: 100%;
     }
     .magazin-title {
-      font-weight: 600;
-      font-size: 36px;
-      line-height: 49px;
       padding: 20px 25px;
       border-bottom: 0.5px solid #E0E0E0;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      color: #3E4958;
     }
     .price-block {
       padding: 25px;
-      padding-bottom: 50px;
+      padding-bottom: 30px;
 
       .price-label {
         font-size: 18px;
@@ -1528,10 +1543,10 @@ footer {
         margin-bottom: 10px;
       }
       .price {
-        font-weight: 600;
+        font-weight: 800;
         font-size: 30px;
         line-height: 41px;
-        color: $color-orange;
+        color: #00C667;
       }
       .plus-minus {
         background: #FFFFFF;
@@ -1548,15 +1563,19 @@ footer {
         }
       }
       .plus-minus-btn {
-        background-color: #E0E0E0;
+        background-color: #CACDD4;
+        border: 1px solid #D5DDE0;
         border-radius: 50%;
         width: 30px;
         height: 30px;
         font-weight: 500;
         font-size: 27px;
         line-height: 0px;
-        color: #374759;
+        color: #fff;
         cursor: pointer;
+        &.plus-btn {
+          background-color: #61A639;
+        }
       }
     }
     .tovar-title {
@@ -1603,6 +1622,9 @@ footer {
       }
     }
   }
+}
+.sec-recommendation {
+  padding-bottom: 70px;
 }
 
 /* ----------------------------   SECTION - Contacts   ------------------------------- */

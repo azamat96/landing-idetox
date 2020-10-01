@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/products', function () {
     return view('products');
+});
+Route::get('/products/{productName}', function () {
+    return view('products-inside');
 });
 
 Route::get('/about-us', function () {

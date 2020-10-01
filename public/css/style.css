@@ -1052,7 +1052,7 @@ footer .footer-law-text {
 }
 
 .tovar-btn-block {
-  padding: 25px 25px 30px 25px;
+  padding: 25px 25px 20px 25px;
 }
 
 .tovar-btn-block .vernut-nazad-btn {
@@ -1061,7 +1061,7 @@ footer .footer-law-text {
 }
 
 .tovar-btn-block .zakazat-btn {
-  background-color: #FA8B00;
+  background-color: #61A639;
   margin-left: 15px;
   color: #fff;
 }
@@ -1644,12 +1644,7 @@ footer .footer-law-text {
 /* ----------------------------   SECTION - Magazin Inside ------------------------------- */
 
 .sec-magazine-inside {
-  padding: 40px 0 120px 0;
-}
-
-.sec-magazine-inside .breadcrumb-custom {
-  background-color: #FAFAFA;
-  margin-bottom: 43px;
+  padding-bottom: 70px;
 }
 
 .sec-magazine-inside .magazin-block {
@@ -1657,8 +1652,31 @@ footer .footer-law-text {
   border: 0.5px solid #E0E0E0;
 }
 
-.sec-magazine-inside .magazin-block .magazin-img {
-  margin: 20px;
+.sec-magazine-inside .magazin-block .magazin-image {
+  padding: 20px;
+}
+
+.sec-magazine-inside .magazin-block .magazin-image-zoom-text {
+  margin: 20px 0 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #86969D;
+}
+
+.sec-magazine-inside .magazin-block .magazin-image .product-img {
+  padding: 0 5px;
+}
+
+.sec-magazine-inside .magazin-block .magazin-image .product-img img {
+  width: 76px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sec-magazine-inside .magazin-block .magazin-image .product-img img.active {
+  border: 2px solid #61A639;
 }
 
 .sec-magazine-inside .magazin-block .magazin-desc {
@@ -1667,16 +1685,17 @@ footer .footer-law-text {
 }
 
 .sec-magazine-inside .magazin-block .magazin-title {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 49px;
   padding: 20px 25px;
   border-bottom: 0.5px solid #E0E0E0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #3E4958;
 }
 
 .sec-magazine-inside .magazin-block .price-block {
   padding: 25px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .sec-magazine-inside .magazin-block .price-block .price-label {
@@ -1686,10 +1705,10 @@ footer .footer-law-text {
 }
 
 .sec-magazine-inside .magazin-block .price-block .price {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 30px;
   line-height: 41px;
-  color: #FA8B00;
+  color: #00C667;
 }
 
 .sec-magazine-inside .magazin-block .price-block .plus-minus {
@@ -1708,15 +1727,20 @@ footer .footer-law-text {
 }
 
 .sec-magazine-inside .magazin-block .price-block .plus-minus-btn {
-  background-color: #E0E0E0;
+  background-color: #CACDD4;
+  border: 1px solid #D5DDE0;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   font-weight: 500;
   font-size: 27px;
   line-height: 0px;
-  color: #374759;
+  color: #fff;
   cursor: pointer;
+}
+
+.sec-magazine-inside .magazin-block .price-block .plus-minus-btn.plus-btn {
+  background-color: #61A639;
 }
 
 .sec-magazine-inside .magazin-block .tovar-title {
@@ -1769,6 +1793,10 @@ footer .footer-law-text {
   .sec-magazine-inside .magazin-block .tover-pod-title {
     padding: 0 20px;
   }
+}
+
+.sec-recommendation {
+  padding-bottom: 70px;
 }
 
 /* ----------------------------   SECTION - Contacts   ------------------------------- */
