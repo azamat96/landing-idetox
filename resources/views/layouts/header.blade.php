@@ -31,28 +31,23 @@
                 </div>
             </div>
             <div class="inner-white-mobile d-md-none">
-                <img src="/src/images/big-logo.png" alt="" class="logo-m">
+                <a href="/"><img src="/src/images/big-logo.png" alt="" class="logo-m"></a>
                 <div class="right-side">
                     <img src="/src/images/menu-mobile-icon.svg" onclick="openNav()" alt="">
                 </div>
                 <div id="myNav" class="overlay">
                     <img src="/src/images/close-icon.svg" alt="" class="closebtn" onclick="closeNav()">
                     <div class="overlay-content">
-                        <p class="mob-menu-logo">luxurymebel</p>
+{{--                        <p class="mob-menu-logo">luxurymebel</p>--}}
 
-                        <?php
-                        //                    $uri = explode( '/', $_SERVER['REQUEST_URI'])[0];
-//                        $uri = $_SERVER['REQUEST_URI'];
-//                        $routes = require '../config/routes.php';
-//                        foreach ($routes as $route => $value) {
-//                            $activeClass = $uri === '/'.$value['file_location'] ? "class='active'" : "";
-//                            echo "<a href='/{$value['file_location']}' {$activeClass}>{$value['name']}</a>";
-//                        }
-                        ?>
+                        <a href='/'          <?php echo 'class="'.($uriList[1]=='' ? 'active' : '').'"'; ?>>Главная</a>
+                        <a href='/products'  <?php echo 'class="'.($uriList[1]=='products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
+                        <a href='/news'      <?php echo 'class="'.($uriList[1]=='news' ? 'active' : '').'"'; ?>>Новости</a>
+                        <a href='/about-us'  <?php echo 'class="'.($uriList[1]=='about-us' ? 'active' : '').'"'; ?>>О нас</a>
+                        <a href='/contacts'  <?php echo 'class="'.($uriList[1]=='contacts' ? 'active' : '').'"'; ?>>Контакты</a>
 
                         <div class="border-line"></div>
-                        <a href="">+7 777 229 88 89</a>
-                        <a href="">+7 747 981 98 62</a>
+                        <a href="tel:+7 707 180 63 86">+7 707 180 63 86</a>
                         <button class="green-btn-outline" type="button" data-toggle="modal" data-target="#zayavkaModal">Оставить заявку</button>
                     </div>
                 </div>

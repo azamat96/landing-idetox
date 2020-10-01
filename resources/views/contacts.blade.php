@@ -14,7 +14,7 @@
         </nav>
 
         <h2 class="section-header">Наши контакты а также соц сети</h2>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center flex-md-row flex-column">
             <div class="c-big-div">
                 <img src="/src/images/c-call.png">
                 <p class="c-big-text">+7 707 180 63 86</p>

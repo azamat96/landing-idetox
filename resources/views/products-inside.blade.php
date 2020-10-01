@@ -13,7 +13,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Для кишечника</li>
             </ol>
         </nav>
-        <div class="magazin-block d-flex flex-column flex-md-row">
+        <div class="magazin-block d-flex flex-column flex-lg-row">
             <div class="magazin-image">
                 <img class="magazin-img" src="/src/images/p1.png">
                 <p class="text-center magazin-image-zoom-text">Чтобы увеличить, нажмите на картинку</p>

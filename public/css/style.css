@@ -143,6 +143,16 @@ header {
   color: #61A639;
 }
 
+@media (max-width: 991px) {
+  .inner-white a {
+    margin: 0 12px;
+  }
+
+  .inner-white .left-side img {
+    height: 35px;
+  }
+}
+
 .green-btn-outline {
   border: 1.5px solid #61A639;
   border-radius: 7px;
@@ -625,12 +635,12 @@ header {
   }
 
   .logo-m {
-    width: 50px;
     height: 39px;
   }
 
   .black-header {
     padding: 7px 0;
+    display: none;
   }
 }
 
@@ -641,8 +651,7 @@ header {
   z-index: 100;
   top: 0;
   left: 0;
-  background-color: #082B4E;
-  /*background-color: rgba(0,0,0, 0.9);*/
+  background-color: #13171D;
   overflow-x: hidden;
   transition: 0.5s;
   overflow-y: hidden;
@@ -692,7 +701,7 @@ header {
 }
 
 .overlay a.active {
-  color: #FA8B00;
+  color: #61A639;
 }
 
 .border-line {
@@ -705,7 +714,7 @@ header {
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #FA8B00;
+  color: #61A639;
 }
 
 .overlay .closebtn {
@@ -864,9 +873,16 @@ footer .footer-law-text {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  footer .footer-main {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 767px) {
   footer {
     padding-bottom: 25px;
+    padding-top: 40px;
   }
 
   footer .footer-main {
@@ -877,12 +893,26 @@ footer .footer-law-text {
   footer .footer-line {
     margin-top: 50px;
   }
+
+  footer .footer-contacts {
+    flex-direction: column;
+  }
+
+  footer .f-title {
+    margin-top: 24px;
+  }
 }
 
 .social-div img {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   margin-right: 20px;
+}
+
+@media (max-width: 1199px) {
+  .social-div img {
+    margin-bottom: 20px;
+  }
 }
 
 /*---------------------------   COMMON STYLES START------------------------------------------ */
@@ -1167,6 +1197,18 @@ footer .footer-law-text {
 .tovari-body {
   display: grid;
   grid-template-columns: auto auto auto auto;
+}
+
+@media (max-width: 1199px) {
+  .tovari-body {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .tovari-body {
+    grid-template-columns: auto;
+  }
 }
 
 .tovar {
@@ -1481,11 +1523,23 @@ footer .footer-law-text {
   font-weight: 500;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
+  .sec-bud-v-kurse .bud-v-kurse-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
   .sec-bud-v-kurse {
-    padding: 30px 0 40px 0;
+    text-align: center;
   }
 
+  .sec-bud-v-kurse .subscribe-block .section-header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
   .sec-bud-v-kurse .section-header {
     font-size: 20px;
     margin-bottom: 10px;
@@ -1704,13 +1758,12 @@ footer .footer-law-text {
 
 @media (max-width: 767px) {
   .sec-too-llc {
-    padding-top: 60px;
     height: auto;
     padding-bottom: 45px;
-    background-image: url("/src/images/mob-onas-bg.png");
   }
 
   .sec-too-llc .section-header {
+    margin-top: 35px;
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 30px;
@@ -1750,6 +1803,32 @@ footer .footer-law-text {
   margin-top: 70px;
 }
 
+@media (max-width: 991px) {
+  .sec-contacts-new .c-big-div:nth-child(1) {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec-contacts-new {
+    margin-bottom: 0;
+  }
+
+  .sec-contacts-new .c-big-div:nth-child(1) {
+    margin-right: 0px;
+    margin-bottom: 60px;
+  }
+
+  .sec-contacts-new .section-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .sec-contacts-new .c-big-div img {
+    width: 80px;
+  }
+}
+
 /* ----------------------------   SECTION - O NAS TEXTS ------------------------------- */
 
 .sec-o-nas-texts {
@@ -1769,7 +1848,7 @@ footer .footer-law-text {
 
 @media (max-width: 767px) {
   .sec-o-nas-texts {
-    padding: 45px 0 90px 0;
+    padding: 45px 0 0 0;
   }
 
   .sec-o-nas-texts .text-body {
@@ -1993,18 +2072,25 @@ footer .footer-law-text {
   padding: 0 25px;
 }
 
-@media (max-width: 767px) {
-  .sec-magazine-inside {
-    padding-top: 30px;
+@media (max-width: 991px) {
+  .sec-magazine-inside .magazin-block .magazin-image {
+    text-align: center;
   }
 
+  .sec-magazine-inside .magazin-block .magazin-desc {
+    border-top: 0.5px solid #E0E0E0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
   .sec-magazine-inside .breadcrumb-custom {
     margin-bottom: 40px;
   }
 
   .sec-magazine-inside .magazin-block .magazin-img {
-    margin: 15px;
-    width: calc(100% - 30px);
+    margin: 15px 0;
+    width: 100%;
   }
 
   .sec-magazine-inside .magazin-block .magazin-desc {
@@ -2012,9 +2098,9 @@ footer .footer-law-text {
   }
 
   .sec-magazine-inside .magazin-block .magazin-title {
-    padding: 0 20px 20px 20px;
-    font-size: 30px;
-    line-height: 41px;
+    padding: 20px 20px 20px 20px;
+    font-size: 24px;
+    line-height: initial;
   }
 
   .sec-magazine-inside .magazin-block .price-block {
@@ -2326,6 +2412,19 @@ footer .footer-law-text {
   margin-bottom: 20px;
 }
 
+@media (max-width: 767px) {
+  .sec-priviliges .priviliges-block {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .sec-priviliges .priviliges-block .privilige {
+    width: 100%;
+    border-right: 0;
+    padding: 20px 30px 20px;
+  }
+}
+
 /* ----------------------------   SECTION - Products   ------------------------------- */
 
 .sec-products {
@@ -2395,6 +2494,29 @@ footer .footer-law-text {
 
 .sec-products .pagination {
   margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+  .sec-products .all-products {
+    width: auto;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .sec-products .all-products {
+    grid-template-columns: auto;
+  }
+
+  .sec-products .products-types {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .sec-products .products-self-block {
+    width: 100%;
+  }
 }
 
 /* ----------------------------   SECTION - News   ------------------------------- */
@@ -2477,5 +2599,12 @@ footer .footer-law-text {
 .sec-new-inside .new-body {
   font-size: 16px;
   font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .sec-new-inside .new-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <img src="/src/images/bud-v-kure.png">
+                <img class="bud-v-kurse-img" src="/src/images/bud-v-kure.png">
             </div>
             <div class="col-lg-6">
                 <div class="subscribe-block">
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="footer-contacts d-md-flex d-none justify-content-between">
+                <div class="footer-contacts d-flex justify-content-between">
                     <div>
                         <p class="f-title">Контакты</p>
                         <p class="f-links"><a href="#">Доставка и оплата</a></p>

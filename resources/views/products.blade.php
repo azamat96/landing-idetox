@@ -13,7 +13,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Для кишечника</li>
             </ol>
         </nav>
-        <div class="d-flex justify-content-start align-items-start">
+        <div class="d-flex justify-content-start align-items-start flex-column flex-md-row">
             <div class="products-types">
                 <div class="osobi-type">
                     <img src="/src/images/present.png" alt="">
