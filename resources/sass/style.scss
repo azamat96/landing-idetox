@@ -177,8 +177,8 @@ header {
 }
 
 .green-btn {
-  padding: 12px 15px;
-  background: $color-orange;
+  padding: 14px 40px;
+  background: #61A639;
   border-radius: 7px;
   display: flex;
   align-items: center;
@@ -194,8 +194,8 @@ header {
 }
 
 .green-btn span {
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 18px;
   color: #fff;
 }
 
@@ -704,10 +704,11 @@ header {
 .zayavka-modal {
 
   .modal-title {
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 49px;
-    color: #374759;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 41px;
+    color: #3E4958;
+    margin: 0 auto;
   }
   .modal-content {
     border-radius: 20px;
@@ -720,12 +721,13 @@ header {
     border-top: 0;
     justify-content: center;
     padding-bottom: 40px;
+    padding-top: 35px;
   }
   .col-form-label {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 30px;
-    color: #374759;
+    color: #3E4958;
     padding-bottom: 5px;
   }
   .modal-body {
@@ -738,7 +740,8 @@ header {
     opacity: 1;
   }
   .form-control {
-    font-size: 20px;
+    font-size: 16px;
+    border-radius: .5rem;
   }
   @media (max-width: $screen-size-medium) {
     .modal-title {

@@ -43,7 +43,7 @@
     <div class="tovari-block mb-40">
         <div class="tovari-header">
             <h4 class="tovari-header-title">Новинки</h4>
-            <a href="#" class="d-flex"><button class="tovari-header-link"></button></a>
+            <a href="/products" class="d-flex"><button class="tovari-header-link"></button></a>
         </div>
         <div class="tovari-body">
 {{--            <div class="row">--}}
@@ -93,7 +93,7 @@
     <div class="tovari-block">
         <div class="tovari-header">
             <h4 class="tovari-header-title">Акции</h4>
-            <a href="#" class="d-flex"><button class="tovari-header-link"></button></a>
+            <a href="/products" class="d-flex"><button class="tovari-header-link"></button></a>
         </div>
         <div class="tovari-body">
             {{--            <div class="row">--}}

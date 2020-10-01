@@ -17,7 +17,7 @@
         <div class="container">
             <div class="inner-white d-none d-md-flex">
                 <div class="left-side">
-                    <img src="/src/images/big-logo.png" alt="" class="logo">
+                    <a href="/"><img src="/src/images/big-logo.png" alt="" class="logo"></a>
                 </div>
                 <div>
                    <a href='/products' <?php echo 'class="'.($_SERVER['REQUEST_URI']=='/products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
@@ -63,28 +63,25 @@
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <form action="../app/mail.php" method="post">
-                    <div class="modal-header">
+                    <div class="modal-header justify-content-end">
                         <h5 class="modal-title" id="exampleModalLabel">Оставьте заявку</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true"><img src="/src/images/modal-close.png"></span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Имя</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Введите имя" name="name" required>
-                        </div>
-                        <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Телефон</label>
                             <input type="text" class="form-control" id="recipient-phone" placeholder="Введите телефон" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">E-mail</label>
-                            <input type="text" class="form-control" id="recipient-email" placeholder="Введите e-mail" name="email" required>
+                            <label for="recipient-name" class="col-form-label">Имя</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Введите имя" name="name" required>
                         </div>
+
                         <div class="form-group">
-                            <label for="message-text" class="col-form-label">Сообщение</label>
-                            <textarea class="form-control" id="message-text" placeholder="Введите сообщение..." name="msg"></textarea>
+                            <label for="recipient-name" class="col-form-label">Город</label>
+                            <input type="text" class="form-control" id="recipient-city" placeholder="С какого вы города" name="city" required>
                         </div>
                     </div>
                     <div class="modal-footer">
