@@ -21,13 +21,13 @@
                 </div>
                 <div>
                     <?php $uriList = explode("/", $_SERVER['REQUEST_URI']); ?>
-                   <a href='/products' <?php echo 'class="'.($uriList[1]=='products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
-                   <a href='/news' <?php echo 'class="'.($uriList[1]=='news' ? 'active' : '').'"'; ?>>Новости</a>
-                   <a href='/about-us' <?php echo 'class="'.($uriList[1]=='about-us' ? 'active' : '').'"'; ?>>О нас</a>
-                   <a href='/contacts' <?php echo 'class="'.($uriList[1]=='contacts' ? 'active' : '').'"'; ?>>Контакты</a>
+                   <a href='/products'  <?php echo 'class="'.($uriList[1]=='products' ? 'active' : '').'"'; ?>>Товары и услуги</a>
+                   <a href='/news'      <?php echo 'class="'.($uriList[1]=='news' ? 'active' : '').'"'; ?>>Новости</a>
+                   <a href='/about-us'  <?php echo 'class="'.($uriList[1]=='about-us' ? 'active' : '').'"'; ?>>О нас</a>
+                   <a href='/contacts'  <?php echo 'class="'.($uriList[1]=='contacts' ? 'active' : '').'"'; ?>>Контакты</a>
                 </div>
                 <div class="right-side">
-                    <button class="korzina-btn">Корзина</button>
+                    <button class="korzina-btn">Корзина <div class="cart-red-count">1</div></button>
                 </div>
             </div>
             <div class="inner-white-mobile d-md-none">
@@ -55,6 +55,72 @@
                         <a href="">+7 747 981 98 62</a>
                         <button class="green-btn-outline" type="button" data-toggle="modal" data-target="#zayavkaModal">Оставить заявку</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Korzina -->
+    <div class="cart-open-block">
+        <div class="mobile-cart-title">
+            <p>Корзина</p>
+            <img class="mobile-cart-close" src="/src/images/korzina-close.png">
+        </div>
+        <div class="cart-not-empty">
+            <div class="cart-open-list">
+                <div class="d-flex align-items-center cart-item">
+                    <img class="cart-item-img" src="/src/images/p1.png">
+                    <div>
+                        <p class="cart-item-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="cart-plus-minus d-flex justify-content-between align-items-center">
+                            <button class="cart-plus-minus-btn"></button>
+                            <p class="cart-tovar-sani">7</p>
+                            <button class="cart-plus-minus-btn cart-plus-btn"></button>
+                        </div>
+                    </div>
+                    <p class="cart-item-price">8 700 KZT</p>
+                    <img class="cart-unselect" src="/src/images/unselect.svg">
+                </div>
+                <div class="d-flex align-items-center cart-item">
+                    <img class="cart-item-img" src="/src/images/p1.png">
+                    <div>
+                        <p class="cart-item-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="cart-plus-minus d-flex justify-content-between align-items-center">
+                            <button class="cart-plus-minus-btn"></button>
+                            <p class="cart-tovar-sani">7</p>
+                            <button class="cart-plus-minus-btn cart-plus-btn"></button>
+                        </div>
+                    </div>
+                    <p class="cart-item-price">8 700 KZT</p>
+                    <img class="cart-unselect" src="/src/images/unselect.svg">
+                </div>
+                <div class="d-flex align-items-center cart-item">
+                    <img class="cart-item-img" src="/src/images/p1.png">
+                    <div>
+                        <p class="cart-item-title">Giovanni, Детокс-система, средство для лица, 7 унций</p>
+                        <div class="cart-plus-minus d-flex justify-content-between align-items-center">
+                            <button class="cart-plus-minus-btn"></button>
+                            <p class="cart-tovar-sani">7</p>
+                            <button class="cart-plus-minus-btn cart-plus-btn"></button>
+                        </div>
+                    </div>
+                    <p class="cart-item-price">8 700 KZT</p>
+                    <img class="cart-unselect" src="/src/images/unselect.svg">
+                </div>
+
+            </div>
+            <div class="cart-open-buttons d-flex justify-content-between align-items-center">
+                <div class="cart-open-itog">
+                    <p>Итог:</p>
+                    <h5>8 700 KZT</h5>
+                </div>
+                <button class="green-btn cart-open-btn">Оформить заказ</button>
+            </div>
+        </div>
+        <div class="cart-if-empty">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                <div class="cart-empty">
+                    <img src="/src/images/cart-empty.png">
+                    <p>Ваша корзина пуста</p>
                 </div>
             </div>
         </div>
@@ -121,7 +187,33 @@
 //        unset($_SESSION['message']);
 //    };
     ?>
+    <script>
+        const reorganizeCartOpen = function() {
+            if ($('.cart-open-list').children().length > 0) {
+                $('.cart-not-empty').show();
+                $('.cart-if-empty').hide();
+            }
+        }
+        const clickOutside = function() {
+            $(document).mouseup(function(e) {
+                var container = $(".cart-open-block");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0)
+                {
+                    container.hide(500);
+                }
+            });
+        }
+    </script>
+    <script>
+        clickOutside()
+        reorganizeCartOpen();
 
+        $('.korzina-btn, .black-cart, .mobile-cart-close').on('click', function () {
+            $('.cart-open-block').toggle(500)
+        })
+
+    </script>
     <script>
         function openNav() {
             document.getElementById("myNav").style.width = "100%";
@@ -131,11 +223,4 @@
             document.getElementById("myNav").style.width = "0%";
         }
     </script>
-    <!--                    <div class="dropdown">-->
-    <!--                        <a class="dropbtn">Товары и услуги</a>-->
-    <!--                        <div class="dropdown-content">-->
-    <!--                            <a href="/iss-gazon.html">Искусственный газон</a>-->
-    <!--                            <a href="/sport-areas.html">Строительство спортивных площадок</a>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
 </header>
