@@ -8,8 +8,9 @@
                 <div class="subscribe-block">
                     <h3 class="section-header">Будьте в курсе</h3>
                     <p class="bud-text">Оставьте заявку и вас проконсультируют</p>
-                    <form action="/app/mail-subscribe.php" method="post">
-                        <input class="subscribe-input" type="email" placeholder="Введите имя" name="email" required><br>
+                    <form action="/order" method="post">
+                        @csrf
+                        <input class="subscribe-input" type="text" placeholder="Введите имя" name="email" required><br>
                         <input class="subscribe-input" type="text" placeholder="Введите телефон" name="phone" required><br>
                         <button class="subscribe-btn" type="submit">Отправить</button>
                     </form>
@@ -74,7 +75,7 @@
                             <img src="/src/images/kara-phone.png" alt="">
                             <a class="f-phone" href="#">+7 707 180 63 86</a>
                         </div>
-                        <button class="green-btn-outline" type="button" data-toggle="modal" data-target="#zayavkaModal">Оставить заявку</button>
+                        <button class="green-btn-outline" type="button"  id="ostavitZaiavku">Оставить заявку</button>
                     </div>
                 </div>
             </div>

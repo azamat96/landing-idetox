@@ -108,7 +108,7 @@
                     <p>Итог:</p>
                     <h5>8 700 KZT</h5>
                 </div>
-                <button class="green-btn cart-open-btn">Оформить заказ</button>
+                <button class="green-btn cart-open-btn" data-toggle="modal" data-target="#zayavkaModal" id="oformitKorzinu">Оформить заказ</button>
             </div>
         </div>
         <div class="cart-if-empty">
@@ -124,7 +124,8 @@
     <div class="modal fade zayavka-modal" id="zayavkaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
-                <form action="../app/mail.php" method="post">
+                <form action="/order" method="post" id="sendOrder">
+                    @csrf
                     <div class="modal-header justify-content-end">
                         <h5 class="modal-title" id="exampleModalLabel">Оставьте заявку</h5>
                         <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
@@ -153,6 +154,8 @@
             </div>
         </div>
     </div>
+
+@if (session('status'))
     <!-- Modal -->
     <div class="modal fade zayavka-modal" id="zayavkaOkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
@@ -172,16 +175,12 @@
             </div>
         </div>
     </div>
-    <?php
-//    if(!empty($_SESSION['message']) && $_SESSION['message'] === 'success') {
-    ?>
-        <script>
-            // $('#zayavkaOkModal').modal('show')
-        </script>
-    <?php
-//        unset($_SESSION['message']);
-//    };
-    ?>
+    <script>
+        $('#zayavkaOkModal').modal('show')
+    </script>
+    <?php session()->flush(); ?>
+@endif
+
     <script>
         const reorganizeCartOpen = function() {
             if ($('.cart-open-list').children().length > 0) {
@@ -207,7 +206,6 @@
         $('.korzina-btn, .black-cart, .mobile-cart-close').on('click', function () {
             $('.cart-open-block').toggle(500)
         })
-
     </script>
     <script>
         function openNav() {
@@ -217,5 +215,13 @@
         function closeNav() {
             document.getElementById("myNav").style.width = "0%";
         }
+    </script>
+    <script>
+        $("#sendOrder").submit(function( event ) {
+
+            console.log(sendState);
+            event.preventDefault();
+            // return;
+        });
     </script>
 </header>

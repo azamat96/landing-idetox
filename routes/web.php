@@ -42,3 +42,5 @@ Route::get('/delivery', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 });
+
+Route::post('/order', 'EmailSendController@sendToEmail');
