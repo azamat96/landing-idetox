@@ -73,7 +73,9 @@ button:focus {
   align-items: center;
   justify-content: space-between;
 }
-
+.mobile-korzina {
+  margin-right: 20px;
+}
 .inner-black a {
   color: #fff;
   padding: 0 10px;
@@ -1334,14 +1336,21 @@ footer {
     height: 100%;
   }
   .cart-open-list {
-    height: calc(100% - 175px);
+    height: calc(100% - 220px);
+  }
+  .cart-open-itog {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .cart-item {
     margin-right: 0;
   }
   .cart-item:first-child {
-    padding-top: 25px;
+    padding-top: 10px;
+  }
+  .cart-item {
+    padding: 8px 10px;
   }
   .cart-open-buttons {
     flex-direction: column;

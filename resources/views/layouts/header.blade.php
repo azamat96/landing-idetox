@@ -33,6 +33,7 @@
             <div class="inner-white-mobile d-md-none">
                 <a href="/"><img src="/src/images/big-logo.png" alt="" class="logo-m"></a>
                 <div class="right-side">
+                    <img src="/src/images/korzina-img.png" class="mobile-korzina" alt="">
                     <img src="/src/images/menu-mobile-icon.svg" onclick="openNav()" alt="">
                 </div>
                 <div id="myNav" class="overlay">
@@ -194,7 +195,7 @@
                 // if the target of the click isn't the container nor a descendant of the container
                 if (!container.is(e.target) && container.has(e.target).length === 0)
                 {
-                    container.hide(500);
+                    container.hide(0);
                 }
             });
         }
@@ -203,8 +204,8 @@
         clickOutside()
         reorganizeCartOpen();
 
-        $('.korzina-btn, .black-cart, .mobile-cart-close').on('click', function () {
-            $('.cart-open-block').toggle(500)
+        $('.korzina-btn, .black-cart, .mobile-cart-close, .mobile-korzina').on('click', function () {
+            $('.cart-open-block').toggle(0)
         })
     </script>
     <script>

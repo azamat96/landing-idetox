@@ -65,6 +65,10 @@ button:focus {
   justify-content: space-between;
 }
 
+.mobile-korzina {
+  margin-right: 20px;
+}
+
 .inner-black a {
   color: #fff;
   padding: 0 10px;
@@ -1448,7 +1452,12 @@ footer .footer-law-text {
   }
 
   .cart-open-list {
-    height: calc(100% - 175px);
+    height: calc(100% - 220px);
+  }
+
+  .cart-open-itog {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .cart-item {
@@ -1456,7 +1465,11 @@ footer .footer-law-text {
   }
 
   .cart-item:first-child {
-    padding-top: 25px;
+    padding-top: 10px;
+  }
+
+  .cart-item {
+    padding: 8px 10px;
   }
 
   .cart-open-buttons {
